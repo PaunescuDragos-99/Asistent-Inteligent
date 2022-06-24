@@ -1,0 +1,73 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.tensorflow.lite.examples.AsistentInteligent">
+
+    <uses-sdk />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="false"
+        android:label="DriverInteligentHelper"
+        android:roundIcon="@drawable/ic_launcher_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.ObjectDetection">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBAFu2FqmNO0YWrvdiSRrECnH1ma0Th3-A">
+        </meta-data>
+        <activity
+            android:name="org.tensorflow.lite.examples.AsistentInteligent.DetectorActivity"
+            android:label="@string/tfe_od_app_name"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.tensorflow.lite.examples.AsistentInteligent.HartiActivity"/>
+        </activity>
+
+        <activity
+            android:name="org.tensorflow.lite.examples.AsistentInteligent.AdaugareMarcajActivity"
+            android:label="Adaugare Marcaj Activity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="org.tensorflow.lite.examples.AsistentInteligent.HartiActivity" />
+        </activity>
+        <activity
+            android:name="org.tensorflow.lite.examples.AsistentInteligent.ListaMarcajeActivity"
+            android:label="NewMarker">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.tensorflow.lite.examples.AsistentInteligent.AdaugareMarcajActivity" />
+        </activity>
+        <activity
+            android:name="org.tensorflow.lite.examples.AsistentInteligent.MarkerEdit"
+            android:label="Marker Edit"
+            android:parentActivityName="org.tensorflow.lite.examples.AsistentInteligent.ListaMarcajeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.tensorflow.lite.examples.AsistentInteligent.ListaMarcajeActivity" />
+        </activity>
+        <activity
+            android:name="org.tensorflow.lite.examples.AsistentInteligent.HartiActivity"
+            android:label="First Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.tensorflow.lite.examples.AsistentInteligent.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name="org.tensorflow.lite.examples.AsistentInteligent.MainActivity"
+            android:label="Main activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+    </application>
+</manifest>

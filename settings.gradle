@@ -1,0 +1,4 @@
+rootProject.name = 'AsistentInteligent'
+include ':app', 'lib_interpreter'
+include ':app', ':lib_task_api'
+
